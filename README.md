@@ -1,4 +1,4 @@
-# Financial.land
+# Financial.al
 
 Es una plataforma dedicada para la agilizar la financiación de terrenos principalmente en Latinoamérica, enfocada tanto para quien busca adquirir un bien como para quienes busquen una oportunidad de inversión de capitales.
 
