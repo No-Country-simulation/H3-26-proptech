@@ -1,6 +1,3 @@
-import { siteConfig } from "@/config/site";
-import Link from "next/link";
-
 export function SiteFooter() {
   return (
     <footer className="flex h-36 w-full border-t border-slate-200 p-4">
