@@ -39,15 +39,10 @@ CSRF_TRUSTED_ORIGINS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': os.environ.get("PGDATABASE"),
-        # 'HOST': os.environ.get('PGHOST'),
-        # 'USER': os.environ.get('PGUSER'),
-        # 'PASSWORD': os.environ.get('PGPASSWORD'),
-        # 'PORT': os.environ.get('PGPORT')
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'eTEtIesbKyiFqTmjPuzXnOcZBlXXJZvF',
-        'HOST': 'junction.proxy.rlwy.net',
-        'PORT': '44625',
+        'NAME': os.environ.get('PGDATABASE'),
+        'HOST': os.environ.get('PGHOST'),
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'PORT': os.environ.get('PGPORT')
     }
 }
