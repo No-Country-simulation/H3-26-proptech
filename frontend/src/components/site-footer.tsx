@@ -1,143 +1,196 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
+import Styles from "./SiteFooter.module.css";
+
+import Logo from "../../public/logo.svg";
+import Image from "next/image";
+
 export function SiteFooter() {
   return (
-    <footer className="">
-      <div className="container">
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div className="flex flex-col">
-            <h2 className="text-lg font-semibold">Suscríbete</h2>
-            <p className="mt-4">
+    <footer className={Styles.footer}>
+      <div className={Styles.footer__container}>
+        <div className={Styles.newsletter}>
+          <div className={Styles.newsletter__content}>
+            <h2 className="text-xl">Suscríbete</h2>
+            <p className="text-sm">
               Recibe las últimas oportunidades de inversión en terrenos,
               actualizaciones y consejos exclusivos directamente en tu correo.
             </p>
           </div>
-          <div className="">
-            <Input placeholder="Ingresa tu correo" />
-            <Button className="mt-4">Suscríbete</Button>
-            <p>
+          <div className={Styles.newsletter__actions}>
+            <div className={Styles.newsletter__actions_form}>
+              <Input
+                placeholder="Ingresa tu correo"
+                className={Styles.newsletter__actions_input}
+              />
+              <Button className={Styles.newsletter__actions_button}>
+                Suscríbete
+              </Button>
+            </div>
+            <p className={Styles.newsletter__actions_text}>
               Al suscribirte, aceptas nuestros [Términos y Condiciones] y la
               Política de Privacidad.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center md:flex-row gap-32">
-          <div>
-            <h2 className="text-lg font-semibold">Nuestra compañía</h2>
-            <nav className="mt-4 flex flex-col space-y-2">
-              <Link className="hover:opacity-75" href="/terms">
-                Sobre Nosotros
-              </Link>
-              <Link className="hover:opacity-75" href="/privacy">
-                Nuestra Misión
-              </Link>
-              <Link className="hover:opacity-75" href="/cookies">
-                Visión y Valores
-              </Link>
-              <Link className="hover:opacity-75" href="/compliance">
-                Historia de Financia.al
-              </Link>
-              <Link className="hover:opacity-75" href="/compliance">
-                Socios y Alianzas
-              </Link>
+        <div className={Styles.links}>
+          <div className={Styles.links__logo}>
+            <Image src={Logo} alt="Financia.al" className="h-24" />
+          </div>
+          <div className={Styles.links__company}>
+            <h2 className="text-b1">Nuestra compañía</h2>
+            <nav className="list-none">
+              <li>
+                <Link className="text-b2" href="/terms">
+                  Sobre Nosotros
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/privacy">
+                  Nuestra Misión
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/cookies">
+                  Visión y Valores
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Historia de Financia.al
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Socios y Alianzas
+                </Link>
+              </li>
             </nav>
           </div>
-
-          <div>
-            <h2 className="text-lg font-semibold">Información Legal</h2>
-            <nav className="mt-4 flex flex-col space-y-2">
-              <Link className="hover:opacity-75" href="/invest">
-                Términos y Condiciones
-              </Link>
-              <Link className="hover:opacity-75" href="/financial-reports">
-                Política de Privacidad
-              </Link>
-              <Link className="hover:opacity-75" href="/investor-relations">
-                Política de Cookies
-              </Link>
-              <Link className="hover:opacity-75" href="/stock-info">
-                Aviso Legal
-              </Link>
-              <Link className="hover:opacity-75" href="/stock-info">
-                Condiciones de Uso
-              </Link>
+          <div className={Styles.links__company}>
+            <h2 className="">Información Legal</h2>
+            <nav className="list-none">
+              <li>
+                <Link className="text-b2" href="/terms">
+                  Términos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/privacy">
+                  Política de Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/cookies">
+                  Política de Cookies
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Aviso Legal
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Condiciones de Uso
+                </Link>
+              </li>
             </nav>
           </div>
-
-          <div>
-            <h2 className="text-lg font-semibold">Support</h2>
-            <nav className="mt-4 flex flex-col space-y-2">
-              <Link className="hover:opacity-75" href="/help">
-                Help Center
-              </Link>
-              <Link className="hover:opacity-75" href="/faq">
-                FAQ
-              </Link>
-              <Link className="hover:opacity-75" href="/customer-service">
-                Customer Service
-              </Link>
-              <Link className="hover:opacity-75" href="/community">
-                Community Forum
-              </Link>
+          <div className={Styles.links__company}>
+            <h2 className="">Oportunidad de Inversión</h2>
+            <nav className="list-none">
+              <li>
+                <Link className="text-b2" href="/terms">
+                  Terrenos Disponibles
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/privacy">
+                  Simulador de Crédito
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/cookies">
+                  Cómo Funciona
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Proceso de Inversión
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Testimonios de Inversores
+                </Link>
+              </li>
             </nav>
           </div>
-
-          <div>
-            <h2 className="text-lg font-semibold">Soporte</h2>
-            <nav className="mt-4 flex flex-col space-y-2">
-              <Link className="hover:opacity-75" href="/invest">
-                Why Invest
-              </Link>
-              <Link className="hover:opacity-75" href="/financial-reports">
-                Financial Reports
-              </Link>
-              <Link className="hover:opacity-75" href="/investor-relations">
-                Investor Relations
-              </Link>
-              <Link className="hover:opacity-75" href="/stock-info">
-                Stock Information
-              </Link>
+          <div className={Styles.links__company}>
+            <h2 className="">Soporte</h2>
+            <nav className="list-none">
+              <li className="gap-2">
+                <Link className="text-b2" href="/terms">
+                  Preguntas Frecuentes
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/privacy">
+                  Atención al Cliente
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/cookies">
+                  Guías y Tutoriales
+                </Link>
+              </li>
+              <li>
+                <Link className="text-b2" href="/compliance">
+                  Libro de Reclamaciones
+                </Link>
+              </li>
             </nav>
           </div>
         </div>
 
-        <Separator className="my-8" />
-
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex space-x-4">
-            <Link className="hover:opacity-75" href="#" aria-label="Facebook">
-              <Facebook className="h-6 w-6" />
-            </Link>
-            <Link className="hover:opacity-75" href="#" aria-label="Instagram">
-              <Instagram className="h-6 w-6" />
-            </Link>
-            <Link className="hover:opacity-75" href="#" aria-label="Twitter">
-              <Twitter className="h-6 w-6" />
-            </Link>
-            <Link className="hover:opacity-75" href="#" aria-label="LinkedIn">
-              <Linkedin className="h-6 w-6" />
-            </Link>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              className="max-w-[200px]"
-            />
-            <Button type="submit">Subscribe</Button>
+        <div className={Styles.credits}>
+          <Separator className="bg-neutral-300" />
+          <div className={Styles.credits__row}>
+            <div>
+              <p className="">© 2024 Financia.Al Derechos Reservados</p>
+            </div>
+            <div className={Styles.credits__row_links}>
+              <Link className="" href="#" aria-label="Facebook">
+                <FacebookIcon size={20} />
+              </Link>
+              <Link className="" href="#" aria-label="Instagram">
+                <InstagramIcon size={20} />
+              </Link>
+              <Link className="" href="#" aria-label="Twitter">
+                <TwitterIcon size={20} />
+              </Link>
+              <Link className="" href="#" aria-label="Twitter">
+                <LinkedinIcon size={20} />
+              </Link>
+              <Link className="" href="#" aria-label="LinkedIn">
+                <YoutubeIcon size={20} />
+              </Link>
+            </div>
           </div>
         </div>
-
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          © 2024 Your Company Name. All rights reserved.
-        </p>
       </div>
     </footer>
   );

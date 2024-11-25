@@ -1,0 +1,106 @@
+.footer {
+  background-color: theme("colors.neutral.900");
+  color: theme("colors.neutral.200");
+  position: relative;
+  width: 1440px;
+  height: 702px;
+  top: 159px;
+  left: 87px;
+  padding: 80px 64px;
+}
+
+.footer__container {
+  width: 1312px;
+  height: 542px;
+}
+
+.newsletter {
+  display: flex;
+  width: 1312px;
+  height: 102px;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.newsletter__content {
+  width: 500px;
+  height: 78px;
+}
+
+.newsletter__actions {
+  width: 400px;
+  height: 102px;
+}
+
+.newsletter__actions_form {
+  display: flex;
+  width: 400px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.newsletter__actions_input {
+  width: 281px;
+  height: 48px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  border: 1px solid theme("colors.primary.300");
+  padding: 12px;
+}
+
+.newsletter__actions_button {
+  width: 119px;
+  height: 48px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: theme("colors.primary.300");
+  padding: 12px 24px;
+}
+
+.newsletter__actions_text {
+  width: 400px;
+  height: 42px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1312px;
+  height: 223px;
+  margin-bottom: 80px;
+}
+
+.links__logo {
+  width: 230px;
+  height: 87px;
+}
+
+.links__company {
+  width: 230px;
+  height: auto;
+  gap: 16px;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  width: 1312px;
+  height: 57px;
+  justify-content: space-between;
+}
+
+.credits__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.credits__row_links {
+  display: flex;
+  gap: 12px;
+}
