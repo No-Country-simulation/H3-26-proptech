@@ -22,6 +22,6 @@ urlpatterns = [
     path('users/', UserList.as_view()),
     path('users/<int:pk>/', UserDetail.as_view()),
     # Personal info endpoints
-    path('p-info/', PersonalInfoList.as_view()),
-    path('p-info/<int:pk>/', PersonalInfoDetail.as_view()),
+    path('info/', PersonalInfoList.as_view()),
+    path('info/<int:pk>/', PersonalInfoDetail.as_view()),
 ]

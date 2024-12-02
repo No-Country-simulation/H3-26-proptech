@@ -1,12 +1,17 @@
 from rest_framework import serializers
+from django.contrib.auth import get_user_model
 from core.models import Personal_Info
+
+User = get_user_model()
 
 
 class PersonalInfoSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Personal_Info
-        fields = '__all__'
-        extra_kwargs = {'user_id': {'read_only': True}}
+        fields = ('DNI', 'first_name', 'last_name', 'contact_email',
+                  'contact_phone', 'additional_phone', 'address_id',
+                  'role_id', 'financial_info_id', 'credit_simulation_id')
 
     def create(self, validated_data):
         return Personal_Info.objects.create(**validated_data)
