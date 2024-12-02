@@ -5,6 +5,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 
 # Imports from apps views
 from users.views import UserList, UserDetail
+from personal_info.views import PersonalInfoList, PersonalInfoDetail
 
 # Urls for the API endpoints
 urlpatterns = [
@@ -20,4 +21,7 @@ urlpatterns = [
     # Users endpoints
     path('users/', UserList.as_view()),
     path('users/<int:pk>/', UserDetail.as_view()),
+    # Personal info endpoints
+    path('info/', PersonalInfoList.as_view()),
+    path('info/<int:pk>/', PersonalInfoDetail.as_view()),
 ]
