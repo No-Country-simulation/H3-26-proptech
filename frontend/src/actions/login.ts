@@ -1,4 +1,4 @@
-import { FormState, SignupFormSchema } from "@/libs/definitions"
+import { FormState, SignupFormSchema } from "@/lib/definitions"
 
 
 export async function signup(state: FormState, formData: FormData) {

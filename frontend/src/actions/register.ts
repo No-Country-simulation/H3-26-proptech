@@ -1,4 +1,4 @@
-import { FormState, SignupFormSchema } from "@/libs/definitions"
+import { FormState, SignupFormSchema } from "@/lib/definitions"
 
 
 export const registerUser = async (state: FormState, formData: FormData) => {

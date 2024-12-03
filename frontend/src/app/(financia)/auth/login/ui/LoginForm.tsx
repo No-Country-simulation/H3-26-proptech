@@ -18,7 +18,7 @@ export const LoginForm = () => {
                     <h3 className={`${jakarta.className} font-bold text-h2 mb-[24px] mt-[115px]`}>¡Bienvenido!</h3>
                     <p className={`text-h7 ${jakarta.className} font-[400]`}>Nos alegra verte de nuevo</p>
                 </div>
-                <div className={`${manrope.className} flex items-center  flex-col w-[95%] h-[368px] m-auto gap-6 my-[24px]`}>
+                <form onSubmit={(e) => e.preventDefault()} className={`${manrope.className} flex items-center  flex-col w-[95%] h-[368px] m-auto gap-6 my-[24px]`}>
                     <div className="grid w-full max-w-sm items-center gap-1.5">
                         <Label htmlFor="email" className="font-[300]">Correo*</Label>
                         <div className="relative">
@@ -48,7 +48,7 @@ export const LoginForm = () => {
                             <span className="text-[#076780] font-[600]"><Link href={'/auth/new-account'}>Registrate ahora</Link></span>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div className={`${manrope.className} text-b2 font-[500] ml-[64px]`}>
                 <span>© 2024 Financia.Al</span>

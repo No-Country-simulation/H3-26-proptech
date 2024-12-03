@@ -4,6 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Lock, Mail, User } from "lucide-react";
 import { jakarta, manrope } from "@/config/fonts";
 import { Button } from "@/components/ui/button";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 import Link from "next/link";
 
 
@@ -19,7 +28,32 @@ export const RegisterForm = () => {
                     <h3 className={`${jakarta.className} font-bold text-h2 mb-[24px] mt-[78.5px]`}>Únete Ahora!</h3>
                     <p className={`text-h7 ${jakarta.className} font-[400]`}>No pierdas tiempo, regístrate ahora y descubre más</p>
                 </div>
-                <div className={`${manrope.className} flex items-center  flex-col w-[95%] h-[368px] m-auto gap-6 my-[24px]`}>
+                <div className={`${manrope.className} flex items-center flex-col w-[95%] h-[368px] m-auto gap-6 my-[24px]`}>
+                    <div className="grid w-full  max-w-sm  gap-2">
+                        <Label htmlFor="doc" className="font-[300]">Documento de identidad*</Label>
+                        <div className="flex justify-center items-center gap-2">
+                            <div className="w-[20%]">
+                                <Select>
+                                    <SelectTrigger className="w-[80px] h-[48px] text-gray-400">
+                                        <SelectValue placeholder="DNI" />
+                                    </SelectTrigger>
+                                    <SelectContent className="text-gray-400">
+                                        <SelectGroup>
+                                            <SelectLabel>DNI</SelectLabel>
+                                            <SelectItem value="DNI">DNI</SelectItem>
+                                            <SelectItem value="CE">CE</SelectItem>
+                                            <SelectItem value="PAS">PAS</SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                            <div className="w-full">
+                                <div className="relative">
+                                    <Input type="text" id="doc" placeholder="Ingrese número de documento" className="pr-4 py-2 block w-full h-[48px]" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="grid w-full max-w-sm items-center gap-1.5">
                         <Label htmlFor="name" className="font-[300]">Nombre Completo*</Label>
                         <div className="relative">
@@ -68,7 +102,7 @@ export const RegisterForm = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${manrope.className} relative mt-[200px] text-b2 font-[500] ml-[64px]`}>
+            <div className={`${manrope.className} relative mt-[280px] text-b2 font-[500] ml-[64px]`}>
                 <span>© 2024 Financia.Al</span>
             </div>
         </>
